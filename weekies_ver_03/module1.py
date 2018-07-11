@@ -50,9 +50,19 @@ def getCandidates(members):
     #remove who was a weekie recently
     candidatesCopy =candidates.copy()
     for candidate in candidatesCopy:
-        if getGap(candidate.lastDate, datetime.datetime.today()) < 42:
+        if getGap(candidate.lastDate, datetime.datetime.today()) < 35:
             candidates.remove(candidate)
     return candidates
 
-
-        
+def updateInfoInFile(weekieOne, weekieTwo, sheet):
+    members = []
+    rowIndex = 2
+    dateIndex = 3
+    countIndex = 0
+    nameIndex = 2
+    for row_cells in sheet.iter_rows(min_row=rowIndex, max_row=sheet.max_row):
+        if row_cells[nameIndex].value == weekieOne.name or row_cells[nameIndex].value == weekieTwo.name:
+            
+            row_cells[dateIndex].value = (datetime.datetime.today()+datetime.timedelta(days = 8)).strftime('%Y-%m-%d')
+            row_cells[countIndex].value = row_cells[countIndex].value + 1
+      
