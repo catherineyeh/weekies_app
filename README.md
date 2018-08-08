@@ -6,6 +6,6 @@ Here is the guideline for selecting weekies:
 3. The 2 weekies need to be available for the upcoming week, need to check Google calendar (will modify it so that the user does not need to look at Google Calendar)
 
 Get it running on your computer:
-git clone https://github.com/catherineyeh/weekies_app.git
-Pay attention to the excel file you are reading from.
-If there are members to be added or deleted, do it directly on the excel file.
+1. git clone https://github.com/catherineyeh/weekies_app.git
+2. Pay attention to the excel file you are reading from.
+3. If there are members to be added or deleted, do it directly on the excel file.
