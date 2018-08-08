@@ -46,11 +46,12 @@ def getNoPto(members):
         count = count + 1
     return members
 def getCandidates(members):
+    gap = 35
     candidates = getNoPto(members)
     #remove who was a weekie recently
     candidatesCopy =candidates.copy()
     for candidate in candidatesCopy:
-        if getGap(candidate.lastDate, datetime.datetime.today()) < 35:
+        if getGap(candidate.lastDate, datetime.datetime.today()) < gap:
             candidates.remove(candidate)
     return candidates
 

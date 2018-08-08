@@ -5,7 +5,7 @@ import random
 from openpyxl import load_workbook
 from xlutils import copy
 
-file = load_workbook(r'C:\proj\weekies_ver_03\weekies_ver_03\test.xlsx')
+file = load_workbook(r'C:\proj\weekies_ver_03\weekies_ver_03\weekies.xlsx')
 sheet = file.active
 
 #whole team
@@ -50,9 +50,11 @@ secIndex = indices[1]
 weekieOne = round2Candidates[firstIndex]
 weekieTwo = round2Candidates[secIndex]
 
-print(weekieOne.name)
-print(weekieTwo.name)
+print("This week's weekies are:")
+print(weekieOne.name + " and " + weekieTwo.name)
+print("\nSee you next week!")
 
 module1.updateInfoInFile(weekieOne, weekieTwo, sheet)
-file.save('test.xlsx')
+
+file.save('weekies.xlsx')
 
