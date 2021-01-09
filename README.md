@@ -1,4 +1,4 @@
-# weekies_app
+# task_scheduling_app
 A Program to help select 2 people to do chores for the upcoming week (we call them weekies).
 Here is the guideline for selecting weekies:
 1. Because we try to encourage members from different departments to work together, the 2 weekies need to be from different departments
